@@ -1,12 +1,12 @@
 import React from 'react'
-import {Grid,Button} from '@mui/material';
-
+import {Grid} from '@mui/material';
+import Typical from 'react-typical';
 const items=[
   {
 
     key:"1",
-    title:'I am Absalat Girma',
-    content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stand."
+    title:'Hello My name is Absalat Girma',
+    
   }
 ]
 
@@ -16,9 +16,16 @@ const Home = () => {
     
       <Grid container  className='h-auto max-w-full text-white font-bold text-3xl  max-sm:text-center bg-nature-light object-cover bg-no-repeat'>
   <Grid className='p-10 'item xs={12} md={8}>
-    {items[0].title}
+  {items[0].title}
+ 
     <div className='max-sm:p-8 '>
-    {items[0].content}
+    <h2>I'm a {' '}
+    <Typical className=""
+        steps={['Web Developer', 1500, 'Graphics Designer', 1100 ,'Web Designer', 900   ]}
+        loop={Infinity}
+        wrapper="p"
+      />
+      </h2>
     <div className="py-5">
 <a href="#_" className="relative inline-flex items-center no-underline justify-start py-1.5 pl-2.5 pr-12 overflow-hidden font-semibold text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group">
 <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-600 group-hover:h-full"></span>
@@ -32,9 +39,6 @@ const Home = () => {
   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3" />
 </svg>
 </span>
-
-
-
 
 <span className="relative w-full text-left text-xl  transition-colors duration-200 ease-in-out group-hover:text-white">Download Cv</span>
 </a>
