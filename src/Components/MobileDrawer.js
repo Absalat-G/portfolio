@@ -25,12 +25,14 @@ const MobileDrawer = () => {
             })}
             </List>
         </Drawer>
-        <IconButton className='sm:hidden ml-auto text-white'onClick={()=>setOpenDrawer(!openDrawer)}>
-      
-<MenuIcon/>
+        <div className="absolute top-0 right-0" >
+        <IconButton className=' sm:hidden text-white'onClick={()=>setOpenDrawer(!openDrawer)}>
+        
+<MenuIcon  />
  
         
         </IconButton>
+        </div>
     </React.Fragment>
   )
 }

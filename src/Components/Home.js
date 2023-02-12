@@ -14,14 +14,14 @@ const Home = () => {
   return (
     <React.Fragment>
     
-      <Grid container className='h-screen max-w-full py-9 text-white font-bold text-3xl  max-sm:text-center bg-nature-light object-cover bg-no-repeat'>
+      <Grid container className='h-screen max-w-full py-9 text-white font-bold text-3xl  max-sm:text-center object-cover'>
   <Grid className='p-10 'item xs={12} md={8}>
   {items[0].title}
  
     <div className='max-sm:p-8 '>
     <h2>I'm a {' '}
     <Typical className=""
-        steps={['Web Developer', 1500, 'Graphics Designer', 1100 ,'Web Designer', 900   ]}
+        steps={['Web Developer', 1000, 'Graphics Designer', 1000 ,'Web Designer', 1000   ]}
         loop={Infinity}
         wrapper="b"
       />
@@ -47,7 +47,7 @@ const Home = () => {
     </div>
   </Grid>
   <Grid item xs={12} md={4} classname='' >
-  <img className="h-auto max-w-md ml-auto sm:text-center object-cover" src="img/background2.jpg" alt=""/>
+  <img className="h-auto max-w-md ml-auto sm:text-center " src="img/background2.jpg" alt=""/>
   </Grid>
   
 </Grid>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AppBar, Tab, Tabs, Toolbar, Typography } from '@mui/material'
+import {  Tab, Tabs, Typography } from '@mui/material'
 import React from 'react'
 import MobileDrawer from './MobileDrawer';
 export const Navbar = [
@@ -21,10 +21,9 @@ const Header= () => {
   const [value ,setValue] = useState(0);
   return (
     <React.Fragment> 
-<AppBar position='static'>
-  <Toolbar className=" bg-gray-700">
- 
-  <Typography className='font-cookie text-4xl' >
+
+<div className='sm:flex justify-end  '>
+  <Typography className='font-cookie flex justify-start text-4xl text-white pl-4' >
 Absalat
   </Typography>
 
@@ -33,20 +32,21 @@ Absalat
   onChange={ (e, value)=> setValue(value)}
   textColor="secondary"
   indicatorColor = "secondary"
-  className="ml-auto max-sm:hidden">
+  className="ml-auto max-sm:hidden ">
 {
 Navbar.map((data)=> {
-  return(<Tab  className=" text-gray-50 font-black"label={data.Title} />)
- 
+  return(
+    
+  <Tab  className=" text-white  font-black"label={data.Title} />
+  )
 })}
        
         
        
       </Tabs>
+      </div>
       <MobileDrawer/>
-  </Toolbar>
-  
-  </AppBar>
+ 
 
     </React.Fragment>
   )
