@@ -11,8 +11,8 @@ module.exports = {
         'cookie': ['Cookie']
       },
       backgroundImage: {
-        "nature-light": "url('/public/img/background5.jpg')"
-        
+        "nature-light": "url('/public/img/background5.jpg')",
+        "nature-color": "linear-gradient(144.11deg, #1DDFDF 13.74%, #46ACB3 90.91%);"
       },
     
     },

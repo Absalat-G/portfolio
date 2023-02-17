@@ -14,18 +14,26 @@ const Home = () => {
   return (
     <React.Fragment>
     
-      <Grid container className='h-screen max-w-full py-9 text-white font-bold text-3xl  max-sm:text-center object-cover'>
-  <Grid className='p-10 'item xs={12} md={8}>
+      <Grid   container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}
+  direction="row"
+  justifyContent="center"
+ 
+  className='h-screen max-w-full py-9 text-white font-bold text-3xl object-cover'>
+       
+  <Grid  item xs={2} sm={4} md={4}  >
   {items[0].title}
  
-    <div className='max-sm:p-8 '>
+    <div className='max-sm:p-6 '>
     <h2>I'm a {' '}
+    
     <Typical className=""
         steps={['Web Developer', 1000, 'Graphics Designer', 1000 ,'Web Designer', 1000   ]}
         loop={Infinity}
         wrapper="b"
       />
+     
       </h2>
+      </div>
     <div className="py-5">
 <a href="#_" className="relative inline-flex items-center no-underline justify-start py-1.5 pl-2.5 pr-12 overflow-hidden font-semibold text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group">
 <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-600 group-hover:h-full"></span>
@@ -44,10 +52,11 @@ const Home = () => {
 </a>
 
     </div>
-    </div>
+   
   </Grid>
-  <Grid item xs={12} md={4} classname='' >
-  <img className="h-auto max-w-md ml-auto sm:text-center " src="img/background2.jpg" alt=""/>
+  
+  <Grid  item xs={2} sm={4} md={4}classname='' >
+  <img  justifyContent="flex-start" className="rounded-2xl  max-md:w-full mx-auto w-2/3 sm:grid justify-items-center  " src="img/background2.jpg" alt=""/>
   </Grid>
   
 </Grid>
