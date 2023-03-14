@@ -4,12 +4,22 @@ import {TypeAnimation} from 'react-type-animation'
 import {motion } from 'framer-motion'
 import {fadeIn} from '../variants'
 import SocialLink, { links } from './SocialLink'
+import emoji from '../assets/emoji.png'
+import { Link } from 'react-scroll';
 
 const Banner = () => {
   return <section id='home' className='min-h-[85vh] lg:mim-h-[78vh] flex items-center' >
 <div className='container mx-auto'>
 <div className='flex flex-col gap-y-6 lg:flex-row lg:items-center lg:gap-x-12'>
 <div className='flex-1 text-center font-secondary lg:text-left'>
+  <motion.div
+   variants={fadeIn('left', 0.2)}
+   initial='hidden'
+    whileInView={'show'} 
+    viewport={{once:false, amount:0.7}}
+   className='flex items-center justify-center lg:hidden h-[200px]'>
+    <img src={emoji} ></img>
+  </motion.div>
   <motion.h1 
   variants={fadeIn('up', 0.3)}
    initial='hidden'
@@ -52,7 +62,8 @@ const Banner = () => {
   initial='hidden'
    whileInView={'show'} 
    viewport={{once:false, amount:0.7}}>
-  <a href='#' className='text-gradient btn-link'>My Portfolio</a>
+    <Link to='portfolio' ><a href='#' className='text-gradient btn-link'>My Portfolio</a></Link>
+
 </motion.div>
 </div>
 

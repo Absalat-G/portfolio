@@ -11,6 +11,7 @@ import Image4 from '../assets/portfolio-img2.png'
 import { Autoplay } from 'swiper';
 
 const Project = () => {
+
   const [active ,setActive] = useState(null)
   const langs = [
     {name:'React with antdesign', para:'Website development for IT and Business Institute', color: 'hue-rotate-[240deg]',image:Image, Demo: 'https://www.google.com/',Github:''},
@@ -20,7 +21,9 @@ const Project = () => {
     {name:'Arduino',para:'RFID based Antitheft Security System for Museum ',image: Image4, Demo: 'https://www.google.com/',Github:''},
   
   ]
+  
   return (
+    
     <div className="h-screen text-white flex items-center justify-center " id='portfolio'>
      
 <div className="max-w-5xl">
@@ -42,8 +45,13 @@ speed={800}
 autoplay={{
   delay: 3000,
 }}
+
 modules={[Autoplay]}
+
 >
+
+
+
 
 {
   langs.map(({color,name,image,para,Demo,Github},i)=>(

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 import {fadeIn} from '../variants'
 const About = () => {
@@ -13,7 +13,7 @@ const About = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{once: false, amount: 0.3}}
-        className='flex-1 bg-about bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top'>
+        className='flex-1 bg-about lg:bg-contain bg-no-repeat  h-[640px]  mix-blend-lighten bg-top '>
           
         </motion.div>
         <motion.div 
@@ -34,6 +34,11 @@ const About = () => {
           and on Computer Networking who can take multiple responsibilities with competence. 
           As well as Strong planning and organizational skills.
         </p>
+        <Link to='contact' >
+        <a href='#'  className='w-1/2 px-6 py-3 m-4 btn btn-sm'>
+              <button >Hire me</button>
+              </a>
+              </Link>
         </motion.div>
       </div>
     </div>
